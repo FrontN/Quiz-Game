@@ -1,97 +1,88 @@
-Python Quiz Game 🧠
-A robust, console-based Quiz game implemented in Python using Object-Oriented Programming (OOP) principles to manage questions, scoring, and game logic across a modular structure.
+# Quiz Game 🧠
 
-Features 🎮
-Advanced OOP Logic: Clean separation of concerns with dedicated classes for data modeling and quiz management.
+A console-based true/false quiz game built with Python and Object-Oriented Programming principles. Test your knowledge with dynamically shuffled questions and instant feedback!
 
-Robust Input Handling: Custom validation loop ensures the game only accepts "Vero" (True) or "Falso" (False), preventing crashes from invalid input.
+## ✨ Features
 
-Dynamic Shuffling: The question bank is automatically shuffled at game startup to ensure a unique experience every round.
+- **Object-Oriented Design** – Clean modular architecture with dedicated classes for questions, quiz logic, and game flow
+- **Robust Input Validation** – Prevents crashes by ensuring only valid responses ("vero"/"falso") are accepted
+- **Shuffled Questions** – Questions are randomized each game for a fresh experience
+- **Real-Time Feedback** – Immediate answer reveals and score updates after each question
+- **Cross-Platform** – Automatic terminal clearing works on Windows, macOS, and Linux
+- **50+ Questions** – Diverse trivia database ready to expand
 
-Clean Interface: Automatic terminal clearing (clear_screen) and timed pauses provide optimal readability between questions.
+## 📋 How to Play
 
-Real-time Feedback: Immediately displays the correct answer and updates the current score after every turn.
+1. **Run the game**: `python main.py`
+2. **Read each question** displayed on your terminal
+3. **Enter your answer**: Type `vero` (true) or `falso` (false) and press Enter
+4. **Get instant feedback**: See if you're correct and your current score
+5. **Beat your score**: Complete all 50 questions and try to answer them all correctly!
 
-Game Rules 📋
-Objective: Correctly answer as many questions as possible from the database.
+### Scoring
+- ✅ Each correct answer = 1 point
+- ❌ Incorrect answers = 0 points (no penalty)
+- 🏁 Final score displayed when the quiz ends
 
-Scoring: Each correct answer grants 1 point. No points are deducted for incorrect answers.
+## 📺 Example Gameplay
 
-Gameplay:
-
-One question is presented at a time.
-
-The user must enter "vero" or "falso" (case-insensitive).
-
-The game reveals the correct answer and the current score immediately.
-
-The quiz concludes once all questions in the bank have been exhausted.
-
-Project Structure 📁
-main.py: The main entry point that initializes the question bank and orchestrates the game loop.
-
-quiz_brain.py: Contains the QuizBrain class, responsible for scoring, input validation, and flow control.
-
-question_model.py: Defines the Questions class used to create uniform question objects.
-
-data.py: A database containing 50 diverse questions and their respective correct answers.
-
-Main Functions Overview:
-clear_screen(): Clears the console based on the operating system (Windows/Unix).
-
-still_has_questions(): Returns True if there are still questions remaining in the list.
-
-get_valid_input(): A validation loop that ensures user input matches the permitted options.
-
-next_question(): Retrieves the current question, handles user input, and triggers the answer check.
-
-check_answer(): Compares the user's input with the correct answer and updates the global score.
-
-Requirements ✅
-Python 3.x
-
-No external dependencies required (uses only the Python standard library).
-
-Installation & Setup 🚀
-Clone the repository:
-
-Bash
-git clone https://github.com/your-username/quiz-game-python.git
-cd quiz-game-python
-How to Play 🎯
-Run the game:
-
-Bash
-python main.py
-Read the question displayed on the terminal.
-
-Type vero or falso and press Enter.
-
-View the feedback and your updated score.
-
-Complete all questions to see your final results.
-
-Game Output Example 📺
-Plaintext
+```
 Q.1: Il Sole è una stella. (vero/falso): vero
-You got it right!
+✓ You got it right!
 The correct answer was: Vero
 Your current score is: 1/1
 
-(Screen clears...)
-
 Q.2: La capitale della Francia è Lione. (vero/falso): falso
-You got it right!
+✓ You got it right!
 The correct answer was: Falso
 Your current score is: 2/2
-Technical Highlights 💡
-Scalability: The Questions class makes it easy to add new questions to data.py without modifying the game logic.
+```
 
-Robustness: Input error handling prevents the game from breaking if the user types unexpected characters.
+## 🚀 Installation
 
-Cross-Platform: The screen clearing function automatically detects if the environment is Windows or Unix-based.
+**Prerequisites:** Python 3.x (no external dependencies required)
 
-Author 👨‍💻
-FrontN - Created as a project to consolidate foundations in Python OOP and logic flow management.
+```bash
+# Clone the repository
+git clone https://github.com/FrontN/Quiz-Game.git
+cd Quiz-Game
 
-Enjoy the quiz and good luck! 🧠⚡
+# Run the game
+python main.py
+```
+
+## 📁 Project Structure
+
+| File | Purpose |
+|------|---------|
+| `main.py` | Entry point; initializes the game and manages the main loop |
+| `quiz_brain.py` | `QuizBrain` class – handles scoring, validation, and game flow |
+| `question_model.py` | `Questions` class – defines question object structure |
+| `data.py` | Question database with 50+ trivia questions |
+
+### Key Functions
+
+- `clear_screen()` – Clears terminal (Windows/Unix compatible)
+- `still_has_questions()` – Checks if questions remain
+- `get_valid_input()` – Validates user input safely
+- `next_question()` – Presents question and processes response
+- `check_answer()` – Compares answer and updates score
+
+## 💡 Technical Highlights
+
+- **Scalable Design** – Add questions to `data.py` without touching game logic
+- **Error Prevention** – Comprehensive input validation prevents crashes
+- **Clean Code** – Modular structure makes the codebase easy to maintain and extend
+- **Cross-Platform** – Automatic environment detection for terminal clearing
+
+## 🤝 Contributing
+
+Feel free to fork, improve, and submit pull requests!
+
+## 👨‍💻 Author
+
+**FrontN** – Created to master Python OOP principles and game logic management
+
+---
+
+Good luck and enjoy the quiz! 🧠⚡
