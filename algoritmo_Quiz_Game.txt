@@ -1,0 +1,51 @@
+ALGORITMO: Quiz Game
+------------------------------
+
+VARIABILI E TIPI:
+  - question_list: dicts
+  - question: str
+  - answer: str
+  - User_Answer: str
+  - Correct_answer: str
+  - score: int
+  - counter
+  - len: int
+  - still_have_questions: Bool
+  - play_again
+  - keep_going
+
+COSTANTI:
+  - funzione question_builder: prende un parametro, question_list, per ogni elemento all'interno di question_list, trova la domanda(question) e la risposta(Correct_answer) e ritorna una lista con tutte domande(question) risposte(Correct_answer)
+  - funzione next_question: prende due parametri, question_builder e counter, usa counter per selezionare dalla lista un elemento e la domanda ad esso collegato, chiede la risposta dell'utente(User_Answer), aggiunge + 1 al counter e ritorna la risposta dell'utente (User_Answer) e Correct_answer
+  - funzione answer_checker: prende due parametri, User_Answer e Correct_answer, controlla se Correct_answer è uguale a User_Answer, ritorna True se si altrimenti ritorna False 
+  - funzione still_have_questions: prende due parametri, counter e len, controlla se counter non è uguale a len, se si ritorna True altrimenti ritorna False
+
+INIZIO:
+  usa la funzione question_builder
+  len <--- lunghezza della lista
+  keep_going <--- 0
+
+  Ciclo keep_going
+  	scrivi("Welcome to the quiz game")
+  	score <--- 0
+  	counter <--- 0
+  	finché still_have_questions
+  		User_Anser, Correct_answer = la funzione next_question
+  		Se answer_checker
+			scrivi("You got it right!")
+			a score aggiungi 1
+		altrimenti
+			scrivi("That's wrong")
+		fine Se
+		scrivi("The correct answer was", Correct_answer)
+		scrivi("Your current score is",score,"/",counter)
+  	scrivi("You've completed the quiz")
+  	scrivi("Your final score was: ",score,"/"len)
+  	scrivi("play again. (yes/no))
+  	leggi(play_again)
+  	Se play_again è uguale a 'no'
+		keep_going uguale False
+		scrivi("See You")
+	fine Se
+
+FINE
