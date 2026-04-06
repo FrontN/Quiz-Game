@@ -59,6 +59,9 @@ python main.py
 | `quiz_brain.py` | `QuizBrain` class – handles scoring, validation, and game flow |
 | `question_model.py` | `Questions` class – defines question object structure |
 | `data.py` | Question database with 50+ trivia questions |
+| `Quiz Game.image.png` | UI Asset; screenshot or graphic representing the game interface |
+| `Quiz_Game_workflow.drawio.pdf` | Flowchart; illustrates the software's execution logic and decision paths. |
+| `algoritmo_Quiz_Game.txt` | Pseudocode; technical specification of the algorithm's logical steps. |
 
 ### Key Functions
 
